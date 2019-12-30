@@ -1,0 +1,20 @@
+/* In your CSS */
+:root {
+    --color-primary: #9FF300;
+    --color-secondary: #463020;
+    --color-neutral: #FF5F00;
+    --font-display: 'Nunito Sans', sans-serif;
+    --font-body:'Open Sans', sans-serif;
+    /* ... */
+}
+
+@tailwind base;
+
+@tailwind components;
+
+.footer-menu li{
+    @apply pr-2 py-1
+}
+@tailwind utilities;
+
+

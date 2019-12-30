@@ -1,0 +1,79 @@
+[staticMenu]
+code = "footer-menu"
+[viewBag]
+==
+<div id="footer-accordion" class="border-t-2 border-gray-400 p-2">
+    <span>More About Fruitmall</span>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        class="inline float-right "
+        width="24"
+        height="24"
+    >
+        <path
+            class="heroicon-ui"
+            d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"
+        />
+    </svg>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        class="inline float-right hidden"
+        width="24"
+        height="24"
+    >
+        <path
+            class="heroicon-ui"
+            d="M8.7 14.7a1 1 0 0 1-1.4-1.4l4-4a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1-1.4 1.4L12 11.42l-3.3 3.3z"
+        />
+    </svg>
+</div>
+<div class="bg-secondary h-auto text-gray-300 hidden" id="footer-content">
+    <div class="p-4">
+        <div class="footer-section pt-2">
+            <span class="font-display text-sm block ">Company</span>
+            {% if staticMenu.menuItems %}
+            <ul class="flex flex-wrap text-xs footer-menu">
+                {% partial staticMenu ~ "::items" items=staticMenu.menuItems %}
+            </ul>
+            {% endif %}
+        </div>
+        <div class="footer-section pt-2">
+            <span class="font-display text-sm block ">Company</span>
+            {% if staticMenu.menuItems %}
+            <ul class="flex flex-wrap text-xs footer-menu">
+                {% partial staticMenu ~ "::items" items=staticMenu.menuItems %}
+            </ul>
+            {% endif %}
+        </div>
+        <div class="footer-section pt-2">
+            <span class="font-display text-sm block ">Company</span>
+            {% if staticMenu.menuItems %}
+            <ul class="flex flex-wrap text-xs footer-menu">
+                {% partial staticMenu ~ "::items" items=staticMenu.menuItems %}
+            </ul>
+            {% endif %}
+        </div>
+        <div class="footer-section pt-2">
+            <span class="font-display text-sm block ">About FruitMall</span>
+            <p class="text-xs">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                sed diam voluptua. At vero eos et accusam et justo duo dolores
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam
+                voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                Lorem ipsum dolor sit amet.
+            </p>
+        </div>
+    </div>
+</div>

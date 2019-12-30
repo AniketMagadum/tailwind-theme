@@ -1,0 +1,36 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="{{ activeLocale|default('en') }}">
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}" />
+        <meta name="title" content="{{ this.page.meta_title }}" />
+        <meta name="author" content="{{ this.theme.author }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{'assets/dist/css/app.css'|theme}}" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:800|Open+Sans&display=swap"
+            rel="stylesheet"
+        />
+        {% styles %}
+    </head>
+    <body class="font-body">
+        <header class="fixed bg-white w-full">
+            {% partial 'site/header' %}
+        </header>
+
+        <main class="h-screen py-4 py-12 mx-auto">
+            {% page %}
+        </main>
+
+        <footer>
+            {% partial 'site/footer' %}
+        </footer>
+        <script src="{{'assets/dist/js/manifest.js'|theme}}"></script>
+        <script src="{{'assets/dist/js/vendor.js'|theme}}"></script>
+        <script src="{{'assets/dist/js/app.js'|theme}}"></script>
+        {% framework extras %} {% scripts %}
+    </body>
+</html>
